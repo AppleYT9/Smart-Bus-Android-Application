@@ -24,6 +24,7 @@ public class TrackingActivity extends AppCompatActivity {
     private AppCompatSpinner spinnerRoutes;
     
     private View dotStop0, dotStop1, dotStop2, dotStop3;
+    private TextView tvTimelineStop0, tvTimelineStop1, tvTimelineStop2, tvTimelineStop3;
 
     private int currentStep = 0;
     private boolean isSimulating = false;
@@ -97,6 +98,11 @@ public class TrackingActivity extends AppCompatActivity {
         dotStop1 = findViewById(R.id.dot_stop1);
         dotStop2 = findViewById(R.id.dot_stop2);
         dotStop3 = findViewById(R.id.dot_stop3);
+
+        tvTimelineStop0 = findViewById(R.id.tv_timeline_stop0);
+        tvTimelineStop1 = findViewById(R.id.tv_timeline_stop1);
+        tvTimelineStop2 = findViewById(R.id.tv_timeline_stop2);
+        tvTimelineStop3 = findViewById(R.id.tv_timeline_stop3);
 
         // Populate Route Switcher Spinner
         String[] routeOptions = {
@@ -235,6 +241,12 @@ public class TrackingActivity extends AppCompatActivity {
             stop2 = "Sector 4";
             stop3 = "City Center";
         }
+
+        // Dynamically update the adjacent vertical path timeline stop name labels
+        if (tvTimelineStop0 != null) tvTimelineStop0.setText(stop0 + " (Start)");
+        if (tvTimelineStop1 != null) tvTimelineStop1.setText(stop1);
+        if (tvTimelineStop2 != null) tvTimelineStop2.setText(stop2);
+        if (tvTimelineStop3 != null) tvTimelineStop3.setText(stop3 + " (End)");
 
         switch (currentStep) {
             case 0:

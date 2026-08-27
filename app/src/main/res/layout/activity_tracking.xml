@@ -186,6 +186,7 @@
                     android:background="@drawable/dot_passed" />
 
                 <TextView
+                    android:id="@+id/tv_timeline_stop0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@id/dot_stop0"
@@ -206,6 +207,7 @@
                     android:background="@drawable/dot_upcoming" />
 
                 <TextView
+                    android:id="@+id/tv_timeline_stop1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@id/dot_stop1"
@@ -226,6 +228,7 @@
                     android:background="@drawable/dot_upcoming" />
 
                 <TextView
+                    android:id="@+id/tv_timeline_stop2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@id/dot_stop2"
@@ -246,6 +249,7 @@
                     android:background="@drawable/dot_upcoming" />
 
                 <TextView
+                    android:id="@+id/tv_timeline_stop3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@id/dot_stop3"
