@@ -102,7 +102,9 @@ public class TrackingActivity extends AppCompatActivity {
         String[] routeOptions = {
             "SB-101 (Central Station)",
             "SB-102 (Railway Station)",
-            "SB-103 (Tech Park)"
+            "SB-103 (Tech Park)",
+            "SB-104 (Airport Terminal)",
+            "SB-105 (City Center)"
         };
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, routeOptions);
@@ -115,6 +117,10 @@ public class TrackingActivity extends AppCompatActivity {
             preSelectedIndex = 1;
         } else if ("SB-103".equalsIgnoreCase(busNumberExtra)) {
             preSelectedIndex = 2;
+        } else if ("SB-104".equalsIgnoreCase(busNumberExtra)) {
+            preSelectedIndex = 3;
+        } else if ("SB-105".equalsIgnoreCase(busNumberExtra)) {
+            preSelectedIndex = 4;
         }
         spinnerRoutes.setSelection(preSelectedIndex);
 
@@ -134,6 +140,12 @@ public class TrackingActivity extends AppCompatActivity {
                 } else if (position == 2) {
                     selectedBus = "SB-103";
                     selectedRouteText = "College ➔ Tech Park";
+                } else if (position == 3) {
+                    selectedBus = "SB-104";
+                    selectedRouteText = "College ➔ Airport Terminal";
+                } else if (position == 4) {
+                    selectedBus = "SB-105";
+                    selectedRouteText = "College ➔ City Center";
                 }
                 
                 tvTopBusNumber.setText("Bus " + selectedBus);
@@ -214,6 +226,14 @@ public class TrackingActivity extends AppCompatActivity {
             stop1 = "North Road";
             stop2 = "IT Junction";
             stop3 = "Tech Park";
+        } else if (busNumber.contains("SB-104")) {
+            stop1 = "Highway Junction";
+            stop2 = "Flyover";
+            stop3 = "Airport Terminal";
+        } else if (busNumber.contains("SB-105")) {
+            stop1 = "East Gate";
+            stop2 = "Sector 4";
+            stop3 = "City Center";
         }
 
         switch (currentStep) {

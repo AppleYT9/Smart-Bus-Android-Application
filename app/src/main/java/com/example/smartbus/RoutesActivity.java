@@ -107,6 +107,34 @@ public class RoutesActivity extends AppCompatActivity {
             "North Road",
             "25 minutes"
         ));
+        routeList.add(new Route(
+            "SB-104",
+            "College ➔ Airport Terminal",
+            new ArrayList<>(Arrays.asList("College", "Highway Junction", "Flyover", "Airport Terminal")),
+            "Active",
+            "Marcus Brody",
+            "+1 (555) 012-7711",
+            40,
+            15,
+            "College",
+            "Airport Terminal",
+            "Highway Junction",
+            "18 minutes"
+        ));
+        routeList.add(new Route(
+            "SB-105",
+            "College ➔ City Center",
+            new ArrayList<>(Arrays.asList("College", "East Gate", "Sector 4", "City Center")),
+            "Active",
+            "James Wilson",
+            "+1 (555) 013-8822",
+            60,
+            48,
+            "College",
+            "City Center",
+            "East Gate",
+            "10 minutes"
+        ));
 
         // Setup RecyclerView
         rvRoutes = findViewById(R.id.rv_routes);
