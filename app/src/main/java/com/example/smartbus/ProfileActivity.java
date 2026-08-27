@@ -83,18 +83,7 @@ public class ProfileActivity extends AppCompatActivity {
             });
         }
 
-        // Real Night-Mode Switch
-        MaterialSwitch switchDarkMode = findViewById(R.id.switch_dark_mode);
-        if (switchDarkMode != null) {
-            // Set checked state before listener mapping to prevent recreation loops
-            int nightMode = AppCompatDelegate.getDefaultNightMode();
-            switchDarkMode.setChecked(nightMode == AppCompatDelegate.MODE_NIGHT_YES);
 
-            switchDarkMode.setOnCheckedChangeListener((buttonView, isChecked) -> {
-                AppCompatDelegate.setDefaultNightMode(isChecked ? 
-                        AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
-            });
-        }
 
         // About SmartBus dialog
         findViewById(R.id.row_about).setOnClickListener(v -> {

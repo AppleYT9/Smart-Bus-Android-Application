@@ -11,6 +11,9 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Force Light Mode system-wide
+        androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(
+                androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
