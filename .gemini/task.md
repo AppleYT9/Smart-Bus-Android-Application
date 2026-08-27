@@ -1,0 +1,28 @@
+# Tasks - SmartBus Setup & Modules 3 to 6
+
+- [x] Initialize Gradle wrapper in workspace
+- [x] Create project-level files (`settings.gradle`, `build.gradle`, `gradle.properties`)
+- [x] Create app module structure
+- [x] Verify build and compilation
+- [x] Create Bottom Navigation and Vector Drawables
+- [x] Create Stop Model and Stop Adapter
+- [x] Create HomeActivity and XML layouts
+- [x] Create Placeholder/Stub Activities for Navigation
+- [x] Update AndroidManifest to register all activities
+- [x] Verify build and compilation for Module 3
+- [x] Create Route Model and Route Adapter
+- [x] Create item_route XML layout
+- [x] Update RoutesActivity and activity_routes XML layout
+- [x] Create BusDetailsActivity and activity_bus_details XML layout
+- [x] Register BusDetailsActivity in AndroidManifest
+- [x] Verify build and compilation for Module 4
+- [x] Extend Route Model with detailed parameters
+- [x] Update mock route values in RoutesActivity
+- [x] Redesign activity_bus_details XML layout with Material cards
+- [x] Update BusDetailsActivity Java logic
+- [x] Update TrackingActivity and activity_tracking XML layout
+- [x] Verify build and compilation for Module 5
+- [ ] Create ic_bus.xml vector drawable
+- [ ] Redesign activity_tracking.xml with simulated map route path
+- [ ] Implement simulation logic and animation in TrackingActivity.java
+- [ ] Verify build and compilation for Module 6

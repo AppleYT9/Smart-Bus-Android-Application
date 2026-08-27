@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_notification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/divider"
+    app:cardBackgroundColor="@color/surface">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Circular Icon Container -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/icon_card"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="#EFF6FF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_notif_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_notification"
+                app:tint="@color/primary_light"
+                android:contentDescription="Alert Icon" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Unread Blue Dot -->
+        <View
+            android:id="@+id/unread_dot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/dot_upcoming"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_notif_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="12dp"
+            android:text="Bus SB-101"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/icon_card"
+            app:layout_constraintEnd_toStartOf="@id/unread_dot"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Message -->
+        <TextView
+            android:id="@+id/tv_notif_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:text="Bus SB-101 is approaching Main Road."
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/tv_notif_title"
+            app:layout_constraintEnd_toStartOf="@id/unread_dot"
+            app:layout_constraintTop_toBottomOf="@id/tv_notif_title" />
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/tv_notif_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="10 mins ago"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@id/tv_notif_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_notif_message" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

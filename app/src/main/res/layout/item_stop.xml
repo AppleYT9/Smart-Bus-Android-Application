@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Vertical Timeline Line -->
+    <View
+        android:id="@+id/timeline_line"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/divider"
+        app:layout_constraintStart_toStartOf="@id/timeline_dot"
+        app:layout_constraintEnd_toEndOf="@id/timeline_dot"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Timeline Dot -->
+    <View
+        android:id="@+id/timeline_dot"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/dot_upcoming"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Stop Name -->
+    <TextView
+        android:id="@+id/stop_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="Main Road Terminal"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@id/timeline_dot"
+        app:layout_constraintEnd_toStartOf="@id/arrival_time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Arrival Time -->
+    <TextView
+        android:id="@+id/arrival_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:30 AM"
+        android:textColor="@color/primary_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
