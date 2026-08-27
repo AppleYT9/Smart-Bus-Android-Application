@@ -126,9 +126,9 @@ public class ProfileActivity extends AppCompatActivity {
         if (tvBus != null) etBus.setText(tvBus.getText().toString());
         if (tvStop != null) etStop.setText(tvStop.getText().toString());
 
-        new AlertDialog.Builder(this)
+        AlertDialog dialog = new AlertDialog.Builder(this)
             .setView(dialogView)
-            .setPositiveButton("Save", (dialog, which) -> {
+            .setPositiveButton("Save", (dialogInterface, which) -> {
                 String inputName = etName.getText().toString().trim();
                 String inputId = etId.getText().toString().trim();
                 String inputEmail = etEmail.getText().toString().trim();
@@ -149,8 +149,22 @@ public class ProfileActivity extends AppCompatActivity {
 
                 Toast.makeText(ProfileActivity.this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
             })
-            .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
-            .show();
+            .setNegativeButton("Cancel", (dialogInterface, which) -> dialogInterface.dismiss())
+            .create();
+
+        dialog.show();
+
+        // Custom light-blue button color styling for better visibility
+        Button btnSave = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        Button btnCancel = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
+        if (btnSave != null) {
+            btnSave.setTextColor(getResources().getColor(R.color.primary_light));
+            btnSave.setTextSize(16);
+        }
+        if (btnCancel != null) {
+            btnCancel.setTextColor(getResources().getColor(R.color.primary_light));
+            btnCancel.setTextSize(16);
+        }
     }
 
     @Override
